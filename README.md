@@ -23,7 +23,7 @@ services:
     environment:
       USERNAME: "<rub-loginid>"
       TOTP_SECRET: "<base32-secret>"
-      IFACE: "tun0"
+      IFACE: "tun0" # optional
       UP_CMD: >- # optional
         iptables -A FORWARD -i tun0 -j ACCEPT;
         iptables -A FORWARD -o tun0 -j ACCEPT;
